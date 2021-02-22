@@ -8,16 +8,16 @@ function soundAlarm() {
     let amount = 1; 
     let audio = new Audio("kim_possible.mp3");  
 
-    function playSound() {      // child function: declare and called within a function 
-        audio.pause();          // pause any audio
-        audio.currentTime = 0;  // sets the current position in seconds in the audio file (= 0)
-        audio.play();           // play audio 
+    function playSound() {      
+        audio.pause();          
+        audio.currentTime = 0;  
+        audio.play();           
     }
 
-    for(let i = 0; i < amount; i++) {       // for amount of times,
-        setTimeout(playSound, 1002 * i);    // play the audio 
-    }   // because for loop does it all at once, and the audio needs to be played one after the other,
-}       // use setTimeout to play it after a 1000 * i ms has passed 
+    for(let i = 0; i < amount; i++) {       
+        setTimeout(playSound, 1002 * i);    
+    }   
+}      
 
 function updateValue(key, value) {
     if (value < 0) {
@@ -65,7 +65,7 @@ function startTimer() {
         if(timerObj.seconds < 0) {
             if (timerObj.minutes == 0) {
                 soundAlarm();
-                return stopTimer(); // return from this function and call stopTimer()
+                return stopTimer(); 
             }
             timerObj.seconds = 59; 
             timerObj.minutes--;
@@ -89,15 +89,13 @@ function pauseTimer() {
     clearInterval(timerObj.timerId); 
 }
 
-// ie: [start, false], [pause, true]
-
 function buttonManager(...buttonsArray) {
     for (let i = 0; i < buttonsArray.length; i++) {
-        let button = "#" + buttonsArray[i][0] + "-button";  // #start-button
-        if (buttonsArray[i][1]) { // true or false
+        let button = "#" + buttonsArray[i][0] + "-button";  
+        if (buttonsArray[i][1]) { 
             $(button).removeAttr("disabled");
         } else {
-            $(button).attr("disabled", "disabled"); // like adding the attribute 
+            $(button).attr("disabled", "disabled"); 
         }
     }
 }
@@ -111,11 +109,6 @@ function unfreezeInputs() {
     $("#minutes-input").removeAttr("disabled", "disabled");
     $("#seconds-input").removeAttr("disabled", "disabled");
 }
-
-// rest operator: 
-// pass in as many arguments as you want to a function 
-// variable number of arguments 
-// separate other arguments with commas before the rest operator
 
 function setTimer25() {
     clearInterval(timerObj.timerId);
