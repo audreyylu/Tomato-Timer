@@ -1,0 +1,79 @@
+body, button, input {
+    font-family: 'Truculenta';
+}
+
+body {
+    margin: 1px 50px; 
+    background-color:#ff3814;
+
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 75px;
+    color: rgb(255, 180, 153);
+    text-align: center;
+    margin: 0 auto; 
+}
+
+h2 {
+    display: block;
+    font-weight: 200; 
+    font-size: 144px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+#controls {
+    display: block; 
+    width: 50%; 
+    margin: 0 auto; 
+
+}
+
+.input-group {
+    margin: 25px 0;
+}
+
+label {
+    display: inline-block; 
+    width: 24%;
+    font-weight: 200; 
+    font-size: 30px; 
+    padding-left: 140px;
+}
+
+input {
+    width: 30%;
+    font-size: 30px; 
+    border: none; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
+    padding-left: 6px; 
+    font-weight: 200; 
+    outline: none; 
+}
+
+input:disabled {
+    background-color: white;
+    opacity: 0.6;
+}
+.buttons {
+    padding-left: 145px;
+}
+button {
+    padding: 5px 20px, 10px; 
+    background-color: #ff8f66;
+    color: white; 
+    border: none; 
+    outline: none; 
+    font-size: 50px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.3; 
+}
+
